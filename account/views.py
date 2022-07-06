@@ -55,7 +55,7 @@ class ForgotPasswordView(APIView):
         serializer = ForgotPasswordSerializer(data=request.data)
         if serializer.is_valid(raise_exception=True):
             serializer.send_verification_email()
-            return Response('')
+            return Response('Вам выслано сообщения для восстонавления пароля')
 
 
 class ForgotPasswordCompletedView(APIView):

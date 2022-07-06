@@ -34,7 +34,7 @@ class ProductViewSet(viewsets.ModelViewSet):
     ordering_fields = ['title', 'price']
 
     def get_serializer_class(self):
-        if self.action == 'listing':
+        if self.action == 'list':
             return ProductSerializer
         elif self.action == 'retrieve':
             return ProductDetailsSerializer
